@@ -1,6 +1,6 @@
 %define name		mpfi
 %define version		1.3.4
-%define release		%mkrel 1
+%define release		%mkrel 2
 %define major		1
 %define devname		%mklibname %{name} -d
 
