@@ -1,6 +1,6 @@
 %define name		mpfi
 %define version		1.3.4
-%define release		%mkrel 2
+%define release		%mkrel 3
 %define major		1
 %define devname		%mklibname %{name} -d
 
@@ -36,7 +36,7 @@ arithmetic multi-precision based on the GMP and MPFR libraries.
 %build
 %configure
 
-%make
+%make CFLAGS="%{optflags} -fPIC"
 
 %install
 %makeinstall_std
