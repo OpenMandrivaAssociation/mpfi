@@ -1,8 +1,8 @@
 %define name		mpfi
 %define version		1.4
-%define release		%mkrel 1
-%define major		2
+%define release		%mkrel 2
 %define devname		%mklibname %{name} -d
+%define major		1
 
 Name:		%{name}
 Group:		Sciences/Mathematics
