@@ -1,7 +1,7 @@
 %define name		mpfi
 %define version		1.4
 %define release		%mkrel 1
-%define major		1
+%define major		2
 %define devname		%mklibname %{name} -d
 
 Name:		%{name}
@@ -25,6 +25,7 @@ the GMP and MPFR libraries.
 Summary:	lib%{name} libraries, includes, etc
 Group:		Development/C
 Provides:	%{name}-devel = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
 
 %description	-n %{devname}
 lib%{name} libraries, includes, etc. MPFI is a C library for interval
