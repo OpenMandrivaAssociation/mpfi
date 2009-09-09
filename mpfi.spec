@@ -1,8 +1,10 @@
-%define name		mpfi
-%define version		1.4
-%define release		%mkrel 2
-%define devname		%mklibname %{name} -d
-%define major		1
+%define name			mpfi
+%define version			1.4
+%define release			%mkrel 2
+%define major			0
+%define libmpfi			%mklibname %{name} %{major}
+%define libmpfi_devel		%mklibname %{name} -d
+%define libmpfi_static_devel	%mklibname %{name} -d -s
 
 Name:		%{name}
 Group:		Sciences/Mathematics
@@ -21,14 +23,31 @@ BuildRequires:	mpfr-devel
 MPFI is a C library for interval arithmetic multi-precision based on
 the GMP and MPFR libraries.
 
-%package	-n %{devname}
+%package	-n %{libmpfi}
+Summary:	lib%{name} dynamic library
+Group:		System/Libraries
+Provides:	lib%{name} = %{version}-%{release}
+
+%description	-n %{libmpfi}
+lib%{name} dynamic library. MPFI is a C library for interval
+arithmetic multi-precision based on the GMP and MPFR libraries.
+
+%package	-n %{libmpfi_devel}
 Summary:	lib%{name} libraries, includes, etc
 Group:		Development/C
 Provides:	%{name}-devel = %{version}-%{release}
-Provides:	lib%{name}-devel = %{version}-%{release}
 
-%description	-n %{devname}
+%description	-n %{libmpfi_devel}
 lib%{name} libraries, includes, etc. MPFI is a C library for interval
+arithmetic multi-precision based on the GMP and MPFR libraries.
+
+%package	-n %{libmpfi_static_devel}
+Summary:	lib%{name} static libraries
+Group:		Development/C
+Provides:	%{name}-static-devel = %{version}-%{release}
+
+%description	-n %{libmpfi_static_devel}
+lib%{name} static libraries. MPFI is a C library for interval
 arithmetic multi-precision based on the GMP and MPFR libraries.
 
 %prep
@@ -46,8 +65,17 @@ autoreconf
 %clean
 rm -rf %{buildroot}
 
-%files		-n %{devname}
+%files		-n %{libmpfi}
+%defattr(-,root,root)
+%{_libdir}/*.so.*
+
+%files		-n %{libmpfi_devel}
 %defattr(-,root,root)
 %{_includedir}/*
-%{_libdir}/*
+%{_libdir}/*.so
+%{_libdir}/*.la
 %{_infodir}/*
+
+%files		-n %{libmpfi_static_devel}
+%defattr(-,root,root)
+%{_libdir}/*.a
