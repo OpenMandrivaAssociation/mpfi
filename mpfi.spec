@@ -1,6 +1,6 @@
 %define name			mpfi
 %define version			1.4
-%define release			%mkrel 3
+%define release			%mkrel 4
 %define major			0
 %define libmpfi			%mklibname %{name} %{major}
 %define libmpfi_devel		%mklibname %{name} -d
@@ -36,6 +36,7 @@ arithmetic multi-precision based on the GMP and MPFR libraries.
 Summary:	lib%{name} libraries, includes, etc
 Group:		Development/C
 Provides:	%{name}-devel = %{version}-%{release}
+Requires:	%{libmpfi} = %{version}-%{release}
 
 %description	-n %{libmpfi_devel}
 lib%{name} libraries, includes, etc. MPFI is a C library for interval
