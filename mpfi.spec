@@ -1,6 +1,6 @@
 %define name			mpfi
 %define version			1.4
-%define release			%mkrel 4
+%define release			%mkrel 5
 %define major			0
 %define libmpfi			%mklibname %{name} %{major}
 %define libmpfi_devel		%mklibname %{name} -d
