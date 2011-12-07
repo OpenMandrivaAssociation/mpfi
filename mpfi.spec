@@ -1,6 +1,6 @@
 %define name			mpfi
 %define version			1.5
-%define release			%mkrel 1
+%define release			%mkrel 2
 %define major			0
 %define libmpfi			%mklibname %{name} %{major}
 %define libmpfi_devel		%mklibname %{name} -d
@@ -62,6 +62,7 @@ export CFLAGS="%{optflags} -fPIC"
 %install
 rm -fr %buildroot
 %makeinstall_std
+rm %{buildroot}%{_libdir}/*.la
 
 %clean
 rm -rf %{buildroot}
@@ -74,7 +75,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/*.so
-%{_libdir}/*.la
 %{_infodir}/*
 
 %files		-n %{libmpfi_static_devel}
