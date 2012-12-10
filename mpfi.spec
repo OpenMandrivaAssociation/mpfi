@@ -80,3 +80,49 @@ rm -rf %{buildroot}
 %files		-n %{libmpfi_static_devel}
 %defattr(-,root,root)
 %{_libdir}/*.a
+
+
+%changelog
+* Wed Dec 07 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5-2mdv2012.0
++ Revision: 738701
+- Rebuild for .la file removal.
+
+* Mon Jan 31 2011 Funda Wang <fwang@mandriva.org> 1.5-1
++ Revision: 634340
+- new version 1.5
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.1 packages
+
+* Wed Sep 09 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.4-4mdv2010.0
++ Revision: 436127
++ rebuild (emptylog)
+
+* Wed Sep 09 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.4-3mdv2010.0
++ Revision: 435719
+- Split package in dynamic, devel and static libraries
+
+* Mon Aug 31 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.4-2mdv2010.0
++ Revision: 423025
++ rebuild (emptylog)
+
+* Tue Aug 25 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.4-1mdv2010.0
++ Revision: 420682
+- update to latest upstream release version 1.4.
+
+* Wed May 20 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.3.4-3mdv2010.0
++ Revision: 377882
++ rebuild (emptylog)
+
+* Fri May 08 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.3.4-2mdv2010.0
++ Revision: 373561
++ rebuild (emptylog)
+
+* Thu Mar 26 2009 Paulo Andrade <pcpa@mandriva.com.br> 1.3.4-1mdv2009.1
++ Revision: 361479
+- Initial import of mpfi, version 1.3.4, rc3.
+  MPFI is a C library for interval arithmetic multi-precision based on
+  the GMP and MPFR libraries.
+  http://gforge.inria.fr/projects/mpfi/
+- mpfi
+
