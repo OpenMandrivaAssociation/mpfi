@@ -1,5 +1,5 @@
 %define version			1.5.1
-%define release			1
+%define release			2
 %define major			0
 %define old_libmpfi		%mklibname mpfi 0
 %define old_libmpfi_devel	%mklibname mpfi} -d
