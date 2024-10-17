@@ -10,7 +10,7 @@ Version:        1.5.1
 Release:        1%{?dist}
 Summary:        An interval arithmetic library based on MPFR
 License:        LGPLv2+
-URL:            http://perso.ens-lyon.fr/nathalie.revol/software.html
+URL:            https://perso.ens-lyon.fr/nathalie.revol/software.html
 Source0:        http://gforge.inria.fr/frs/download.php/30129/%{name}-%{version}.tar.bz2
 Source1:        %{name}.rpmlintrc
 BuildRequires:  mpfr-devel
