@@ -13,6 +13,11 @@ License:        LGPLv2+
 URL:            https://perso.ens-lyon.fr/nathalie.revol/software.html
 Source0:        http://gforge.inria.fr/frs/download.php/30129/%{name}-%{version}.tar.bz2
 Source1:        %{name}.rpmlintrc
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  mpfr-devel
 BuildRequires:  gmp-devel
 %rename %{old_libmpfi}
